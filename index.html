@@ -15,11 +15,36 @@
     <header>
         <!-------- Navbar start ---------------->
         <nav class="navbar">
-
+            <div class="logo-container">
+                <a href="#" class="logo-link">
+                    <img src="styles/images/logos/ds-logo.svg" alt="DS" class="logo-img">
+                </a>
+            </div>
+            <div class="nav-icon-container">
+                <button class="nav-icon hamburger" type="button">
+                    <img src="" alt="">
+                </button>
+                <button class="nav-icon close" type="button">
+                    <img src="" alt="">
+                </button>
+            </div>
+            <div class="navlist-container">
+                <ul class="navlist">
+                    <li class="navitem"><a href="#projects" class="navlink">Projects</a></li>
+                    <li class="navitem"><a href="#about" class="navlink">About</a></li>
+                    <li class="navitem"><a href="#contact" class="navlink">Contact</a></li>
+                </ul>
+            </div>
         </nav>
         <!-------- Navbar end ---------------->
         <!-------- Hero start ---------------->
-        <div class="hero"></div>
+        <div class="hero">
+            <div class="hero-text-container">
+                <h1>Hi! I'm Danielle Strickland</h1>
+                <p>Web Developer & Creative</p>
+            </div>
+            <img src="styles/images/curly coder.png" alt="curly haired person behind a laptop" class="coder-img">
+        </div>
         <!-------- Hero end ---------------->
     </header>
     <!-------- Header end ---------------->
@@ -27,17 +52,20 @@
     <main>
         <!-------- Project section start ---------------->
         <section id="project">
+            <h2>Projects</h2>
             <!-------- Featured project start ---------------->
             <div class="project featured">
                 <div class="img-container featured">
                     <img src="" alt="" class="project-img featured">
                 </div>
                 <div class="project-info featured">
-                    <h1 class="project-name"></h1>
+                    <h3 class="project-name"></h3>
                     <p class="project-description"></p>
                     <div class="btn-container">
-                        <div class="btn fill"></div>
-                        <div class="btn nofill"></div>
+                        <button class="btn fill project-btn">Live Site<img src="styles/images/icons/external.svg" alt=""
+                                aria-hidden="true"></button>
+                        <button class="btn nofill project-btn">Github<img src="styles/images/icons/github.svg" alt=""
+                                aria-hidden="true"></button>
                     </div>
                     <div class="tech-container">
                         <div class="tech">
@@ -68,11 +96,13 @@
                     <img src="" alt="" class="project-img">
                 </div>
                 <div class="project-info">
-                    <h1 class="project-name"></h1>
+                    <h3 class="project-name"></h3>
                     <p class="project-description"></p>
                     <div class="btn-container">
-                        <div class="btn fill"></div>
-                        <div class="btn nofill"></div>
+                        <button class="btn fill project-btn">Live Site<img src="styles/images/icons/external.svg" alt=""
+                                aria-hidden="true"></button>
+                        <button class="btn nofill project-btn">Github<img src="styles/images/icons/github.svg" alt=""
+                                aria-hidden="true"></button>
                     </div>
                     <div class="tech-container">
                         <div class="tech">
@@ -94,11 +124,13 @@
                     <img src="" alt="" class="project-img">
                 </div>
                 <div class="project-info">
-                    <h1 class="project-name"></h1>
+                    <h3 class="project-name"></h3>
                     <p class="project-description"></p>
                     <div class="btn-container">
-                        <div class="btn fill"></div>
-                        <div class="btn nofill"></div>
+                        <button class="btn fill project-btn">Live Site<img src="styles/images/icons/external.svg" alt=""
+                                aria-hidden="true"></button>
+                        <button class="btn nofill project-btn">Github<img src="styles/images/icons/github.svg" alt=""
+                                aria-hidden="true"></button>
                     </div>
                     <div class="tech-container">
                         <div class="tech">
@@ -120,11 +152,13 @@
                     <img src="" alt="" class="project-img">
                 </div>
                 <div class="project-info">
-                    <h1 class="project-name"></h1>
+                    <h3 class="project-name"></h3>
                     <p class="project-description"></p>
                     <div class="btn-container">
-                        <div class="btn fill"></div>
-                        <div class="btn nofill"></div>
+                        <button class="btn fill project-btn">Live Site<img src="styles/images/icons/external.svg" alt=""
+                                aria-hidden="true"></button>
+                        <button class="btn nofill project-btn">Github<img src="styles/images/icons/github.svg" alt=""
+                                aria-hidden="true"></button>
                     </div>
                     <div class="tech-container">
                         <div class="tech">
@@ -146,11 +180,13 @@
                     <img src="" alt="" class="project-img">
                 </div>
                 <div class="project-info">
-                    <h1 class="project-name"></h1>
+                    <h3 class="project-name"></h3>
                     <p class="project-description"></p>
                     <div class="btn-container">
-                        <div class="btn fill"></div>
-                        <div class="btn nofill"></div>
+                        <button class="btn fill project-btn">Live Site<img src="styles/images/icons/external.svg" alt=""
+                                aria-hidden="true"></button>
+                        <button class="btn nofill project-btn">Github<img src="styles/images/icons/github.svg" alt=""
+                                aria-hidden="true"></button>
                     </div>
                     <div class="tech-container">
                         <div class="tech">
@@ -170,8 +206,13 @@
         <!-------- Project section end ---------------->
         <!-------- About section start ---------------->
         <section id="about">
+            <h2>About</h2>
+            <div class="about-card">
+                <h3>About Me</h3>
+            </div>
             <!-------- Skills subsection start ---------------->
             <section class="skills">
+                <h3>Skills</h3>
                 <ul class="skills-container">
                     <!-------- Skill ---------------->
                     <li class="skill-container">
@@ -237,7 +278,9 @@
     <!-------- Footer start---------------->
     <footer>
         <!-------- Contact section begins ---------------->
-        <section id="contact"></section>
+        <section id="contact">
+            <h2>Get in touch</h2>
+        </section>
         <!-------- Contact section ends ---------------->
     </footer>
     <!-------- Footer end---------------->
