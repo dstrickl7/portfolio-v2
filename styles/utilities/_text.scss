@@ -1,0 +1,27 @@
+@use "fonts";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: fonts.$spectral;
+}
+
+p {
+  font-size: clamp(1rem, 1rem, 1.5rem);
+}
+
+h1 {
+  font-size: clamp(1.75rem, 1.75rem, 3rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 1.5rem, 2rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 1.25rem, 1.75rem);
+}
+h4 {
+  font-size: clamp(1rem, 1.1rem, 1.5rem);
+}

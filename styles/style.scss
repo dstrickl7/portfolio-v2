@@ -1,0 +1,24 @@
+@use "./utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: utilities.$nunito;
+  @include utilities.theme(
+    utilities.$lgrey,
+    utilities.$black,
+    utilities.$aquagreen,
+    utilities.$dpblue,
+    utilities.$skyblue
+  ); //bg-color, font, c1, c2,c3
+}
+
+/*******Temp img sizing*******/
+img {
+  width: 25vw;
+}

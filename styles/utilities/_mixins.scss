@@ -1,0 +1,43 @@
+@mixin flex($align, $justify, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin fill($color, $text-color) {
+  background-color: $color;
+  color: $text-color;
+}
+
+@mixin nofill($color) {
+  background-color: transparent;
+  border: solid $color 0.2rem;
+  color: $color;
+}
+
+@mixin theme($background, $text, $color1, $color2, $color3) {
+  background-color: $background;
+  color: $text;
+  .btn-fill {
+    @include fill($color1, white);
+  }
+  .btn-nofill {
+    @include nofill($color1);
+  }
+}
+
+@media (min-width: 900px) {
+  @mixin theme($background, $text, $color1, $color2, $color3) {
+    .btn-fill {
+      &:hover {
+        @include fill($color2, white);
+      }
+    }
+    .btn-nofill {
+      &:hover {
+        @include fill($color2, white);
+      }
+    }
+  }
+}
