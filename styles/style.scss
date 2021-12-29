@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,3 +40,24 @@ body {
 img {
   width: 25vw;
 }
+
+/*************************************************************/
+// Social icon side bar
+.icon-bar {
+  visibility: hidden;
+}
+.icon-bar.visible {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 40%;
+  @include utilities.flex(center, center, column);
+  background: transparent;
+  a {
+    padding: 0.25rem;
+    margin: 0.5rem 0;
+    color: utilities.$black;
+  }
+}
+
+/*************************************************************/

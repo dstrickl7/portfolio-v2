@@ -215,6 +215,7 @@ button a {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -261,5 +262,29 @@ body .btn-nofill a {
 img {
   width: 25vw;
 }
+
+/*************************************************************/
+.icon-bar {
+  visibility: hidden;
+}
+
+.icon-bar.visible {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+}
+.icon-bar.visible a {
+  padding: 0.25rem;
+  margin: 0.5rem 0;
+  color: #000000;
+}
+
+/*************************************************************/
 
 /*# sourceMappingURL=style.css.map */
