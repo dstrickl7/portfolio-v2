@@ -1,0 +1,42 @@
+@use "utilities";
+
+.hero {
+  height: 100vh;
+  @include utilities.flex(center, normal, column);
+  padding: 1.5rem;
+}
+
+.hero-text-container {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+  h1 {
+    line-height: 1.25;
+  }
+  p {
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    line-height: 1;
+  }
+}
+
+.hero-btn-container {
+  width: 100%;
+  @include utilities.flex(center, center);
+}
+
+.hero-btn-container > .fill {
+  @include utilities.fill(
+    utilities.$dpblue,
+    utilities.$white,
+    utilities.$aquagreen
+  );
+}
+
+.hero-btn-container > .nofill {
+  @include utilities.nofill(utilities.$dpblue, utilities.$aquagreen);
+}
+
+.coder-img {
+  height: 40vh;
+  width: unset;
+}

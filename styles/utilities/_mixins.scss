@@ -5,15 +5,24 @@
   align-items: $align;
 }
 
-@mixin fill($color, $text-color) {
-  background-color: $color;
+@mixin fill($color, $text-color, $color2: $color) {
+  padding: 0.65rem;
+  background: linear-gradient(to right, $color 10%, $color2);
   color: $text-color;
+  a {
+    color: $text-color;
+  }
 }
 
-@mixin nofill($color) {
-  background-color: transparent;
+@mixin nofill($color, $color2: $color) {
+  background-color: rgb(240, 240, 240);
   border: solid $color 0.2rem;
+  border-image: linear-gradient(to right, $color 10%, $color2) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   color: $color;
+  a {
+    color: $color;
+  }
 }
 
 @mixin theme($background, $text, $color1, $color2, $color3) {

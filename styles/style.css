@@ -8,23 +8,51 @@ h6 {
 }
 
 p {
-  font-size: clamp(1rem, 1rem, 1.5rem);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
 }
 
 h1 {
-  font-size: clamp(1.75rem, 2.5rem, 4rem);
+  font-size: clamp(2rem, 5vw, 3.5rem);
 }
 
 h2 {
-  font-size: clamp(1.5rem, 1.5rem, 2rem);
+  font-size: clamp(1.75rem, 5vw, 3rem);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 1.25rem, 1.75rem);
+  font-size: clamp(1.25rem, 5vw, 1.75rem);
 }
 
 h4 {
-  font-size: clamp(1rem, 1.1rem, 1.5rem);
+  font-size: clamp(1rem, 5vw, 1.5rem);
+}
+
+.btn {
+  text-align: center;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  margin: 1rem 0.5rem;
+}
+.btn:hover {
+  cursor: pointer;
+}
+
+button a {
+  text-decoration: none;
+}
+
+.btn-sm {
+  min-width: 30%;
+}
+
+.btn-md {
+  min-width: 40%;
+}
+
+.btn-lg {
+  min-width: 50%;
 }
 
 .navbar {
@@ -128,6 +156,61 @@ h4 {
 }
 
 /**************************************************************/
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.hero-text-container {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.hero-text-container h1 {
+  line-height: 1.25;
+}
+.hero-text-container p {
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  line-height: 1;
+}
+
+.hero-btn-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-btn-container > .fill {
+  padding: 0.65rem;
+  background: linear-gradient(to right, #81a9fd 10%, #81fdcb);
+  color: #fcfcfc;
+}
+.hero-btn-container > .fill a {
+  color: #fcfcfc;
+}
+
+.hero-btn-container > .nofill {
+  background-color: #f0f0f0;
+  border: solid #81a9fd 0.2rem;
+  border-image: linear-gradient(to right, #81a9fd 10%, #81fdcb) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #81a9fd;
+}
+.hero-btn-container > .nofill a {
+  color: #81a9fd;
+}
+
+.coder-img {
+  height: 40vh;
+  width: unset;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -141,12 +224,21 @@ body {
   color: #000000;
 }
 body .btn-fill {
-  background-color: #81fdcb;
+  padding: 0.65rem;
+  background: linear-gradient(to right, #81fdcb 10%, #81fdcb);
+  color: white;
+}
+body .btn-fill a {
   color: white;
 }
 body .btn-nofill {
-  background-color: transparent;
+  background-color: #f0f0f0;
   border: solid #81fdcb 0.2rem;
+  border-image: linear-gradient(to right, #81fdcb 10%, #81fdcb) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #81fdcb;
+}
+body .btn-nofill a {
   color: #81fdcb;
 }
 

@@ -1,0 +1,29 @@
+.btn {
+  text-align: center;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  font-weight: 600;
+  margin: 1rem 0.5rem;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+button {
+  a {
+    text-decoration: none;
+  }
+}
+
+.btn-sm {
+  min-width: 30%;
+}
+
+.btn-md {
+  min-width: 40%;
+}
+
+.btn-lg {
+  min-width: 50%;
+}
