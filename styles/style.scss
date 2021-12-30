@@ -1,6 +1,7 @@
 @use "./utilities";
 @use "navbar";
 @use "hero";
+@use "projects";
 
 * {
   margin: 0;
@@ -45,12 +46,15 @@ img {
 // Social icon side bar
 .icon-bar {
   visibility: hidden;
+  transform: translateX(-100%);
 }
 .icon-bar.visible {
   visibility: visible;
   position: fixed;
+  transform: translateX(0);
   left: 0;
   top: 40%;
+  transition: transform 1s ease-in;
   @include utilities.flex(center, center, column);
   background: transparent;
   a {
