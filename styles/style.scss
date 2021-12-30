@@ -2,6 +2,7 @@
 @use "navbar";
 @use "hero";
 @use "projects";
+@use "about";
 
 * {
   margin: 0;
@@ -20,6 +21,11 @@ body {
     utilities.$dpblue,
     utilities.$skyblue
   ); //bg-color, font, c1, c2,c3
+}
+
+section {
+  padding: 1.5rem;
+  @include utilities.flex(center, normal, column);
 }
 
 .overlay {

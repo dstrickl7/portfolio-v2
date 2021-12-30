@@ -1,0 +1,70 @@
+@use "./utilities";
+
+.about-card {
+  width: 85vw;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background-color: utilities.$white;
+  @include utilities.flex(center, normal, column);
+  .nofill {
+    @include utilities.nofill(utilities.$black);
+  }
+  h3 {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 12.5%;
+      height: 0.25rem;
+      width: 75%;
+      background-color: utilities.$skyblue;
+    }
+  }
+}
+
+.about-card-top {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  span {
+    @include utilities.flex(center, normal);
+  }
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 0.2rem;
+}
+
+.answer {
+  font-weight: 300;
+}
+
+.me-description-container {
+  @include utilities.flex(center, normal, column);
+}
+
+.about-me {
+}
+
+.resume-container {
+  width: 100%;
+  display: none;
+}
+
+.resume-container.active {
+  display: flex;
+  min-height: 80vh;
+}
+
+.resume-display {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.about-card-bottom-container {
+  img {
+    width: 1.5rem;
+  }
+  @include utilities.flex(center, normal, column);
+}

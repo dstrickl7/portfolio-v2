@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="25.542" height="28.241" viewBox="0 0 25.542 28.241">
+  <g id="Lightbulb" transform="translate(-523.845 -4428.793)">
+    <path id="_3586363_idea_light_lightbulb_icon" data-name="3586363_idea_light_lightbulb_icon" d="M34.418,6.588A7.987,7.987,0,0,0,23.976,18.67a4.8,4.8,0,0,1,1.517,3.281.447.447,0,0,0,.011.069v4.1a.409.409,0,0,0,.409.409h.407a2.265,2.265,0,0,0,2.091,2.1h1.856a2.265,2.265,0,0,0,2.091-2.1h.407a.409.409,0,0,0,.409-.409V21.955s0,0,0,0a4.49,4.49,0,0,1,1.555-3.307,7.981,7.981,0,0,0-.312-12.057Zm-6.523,7.758h-.628a.628.628,0,1,1,.628-.628Zm2.891-.628a.628.628,0,1,1,.628.628h-.628Zm-.246,8.613h1.818V25.71H26.323V22.331h3.915m-1.526-.818v-6.35H29.97l.009,6.35Zm1.556,6.293H28.412a1.423,1.423,0,0,1-1.264-1.28h4.383A1.423,1.423,0,0,1,30.268,27.807Zm3.911-9.765a5.366,5.366,0,0,0-1.8,3.472H30.8l-.009-6.35h.626a1.446,1.446,0,1,0-1.446-1.445v.628H28.712v-.628a1.446,1.446,0,1,0-1.446,1.446h.628v6.35H26.267a5.549,5.549,0,0,0-1.742-3.45,7.172,7.172,0,1,1,9.654-.022Z" transform="translate(507.372 4428.41)" fill="#010101"/>
+    <path id="Path_63" data-name="Path 63" d="M0,0A4.079,4.079,0,0,1,1.971,4.894" transform="translate(538.102 4435.647) rotate(-25)"/>
+    <line id="Line_2" data-name="Line 2" y1="0.818" x2="2.453" transform="translate(546.302 4435.768)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_3" data-name="Line 3" x2="3.509" y2="2.623" transform="translate(525.59 4430.863)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_7" data-name="Line 7" x2="2.18" y2="0.92" transform="translate(524.5 4436.126)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_4" data-name="Line 4" x2="1.499" y2="1.635" transform="translate(531.041 4429.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_5" data-name="Line 5" y1="1.635" x2="1.288" transform="translate(541.472 4429.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_6" data-name="Line 6" y1="2.316" x2="3.236" transform="translate(544.701 4430.863)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>

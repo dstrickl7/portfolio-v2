@@ -66,6 +66,13 @@ projects.forEach((project) => {
 });
 
 /***********************************************************/
+// Resume display variables
+const resumeContainer = document.querySelector(".resume-container");
+const resumeBtn = document.querySelector("#resume-btn");
+
+resumeBtn.addEventListener("click", () => {
+  resumeContainer.classList.toggle("active");
+});
 
 /***********************************************************/
 

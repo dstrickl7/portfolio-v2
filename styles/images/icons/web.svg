@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="34" viewBox="0 0 35 34">
+  <g id="Group_77" data-name="Group 77" transform="translate(-355 -4596)">
+    <g id="Group_74" data-name="Group 74" transform="translate(355 4596)">
+      <g id="Ellipse_10" data-name="Ellipse 10" fill="#fff" stroke="#635757" stroke-width="1">
+        <circle cx="17" cy="17" r="17" stroke="none"/>
+        <circle cx="17" cy="17" r="16.5" fill="none"/>
+      </g>
+      <path id="Path_53" data-name="Path 53" d="M0,.85a51.893,51.893,0,0,0,10.91.921A51.291,51.291,0,0,0,21.675,0" transform="translate(6.588 29.112)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_61" data-name="Path 61" d="M0,2.824S6.774,6.588,13.459,5.883,26.739,0,26.739,0" transform="translate(8.475 4.511) rotate(90)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_62" data-name="Path 62" d="M0,2.824S6.553,6.588,13.02,5.883,25.868,0,25.868,0" transform="translate(26.127 28.581) rotate(-90)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_58" data-name="Path 58" d="M0,.85a49.912,49.912,0,0,0,10.7.921A49.4,49.4,0,0,0,21.25,0" transform="translate(26.74 4.511) rotate(180)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_56" data-name="Path 56" d="M0,2.089A48.045,48.045,0,0,0,16.222,4.353C24.279,3.83,32.229,0,32.229,0" transform="translate(1.133 20.967)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_57" data-name="Path 57" d="M0,2.089A48.045,48.045,0,0,0,16.222,4.353C24.279,3.83,32.229,0,32.229,0" transform="translate(32.902 13.813) rotate(180)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_59" data-name="Path 59" d="M0,2.05A47.147,47.147,0,0,0,15.919,4.271C23.826,3.759,31.627,0,31.627,0" transform="translate(12.58 1.275) rotate(90)" fill="none" stroke="#635757" stroke-width="1"/>
+      <path id="Path_60" data-name="Path 60" d="M0,2.05A45.1,45.1,0,0,0,15.554,4.271C23.279,3.759,30.9,0,30.9,0" transform="translate(22.404 31.875) rotate(-90)" fill="none" stroke="#635757" stroke-width="1"/>
+    </g>
+    <text id="WWW" transform="translate(355 4617)" fill="#1f2429" font-size="9" font-family="HarlowSolid, Harlow Solid" letter-spacing="0.1em"><tspan x="0" y="0">WWW</tspan></text>
+  </g>
+</svg>

@@ -16,15 +16,19 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
 }
 
 h3 {
-  font-size: clamp(1.25rem, 5vw, 1.75rem);
+  font-size: clamp(1.3rem, 5vw, 1.75rem);
 }
 
 h4 {
-  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-size: clamp(1.25rem, 5vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 .btn {
@@ -212,14 +216,6 @@ button a i {
 .coder-img {
   height: 40vh;
   width: unset;
-}
-
-.projects {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: normal;
-  align-items: center;
 }
 
 .project {
@@ -418,6 +414,91 @@ button a i {
 }
 
 /***************************************************************/
+.about-card {
+  width: 85vw;
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background-color: #fcfcfc;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+}
+.about-card .nofill {
+  background-color: white;
+  border: solid #000000 0.2rem;
+  border-image: linear-gradient(to right, #000000 10%, #000000) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #000000;
+}
+.about-card .nofill a {
+  color: #000000;
+}
+.about-card h3 {
+  position: relative;
+}
+.about-card h3:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 12.5%;
+  height: 0.25rem;
+  width: 75%;
+  background-color: #74e3d5;
+}
+
+.about-card-top {
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+}
+.about-card-top span {
+  display: flex;
+  flex-direction: row;
+  justify-content: normal;
+  align-items: center;
+}
+
+.label {
+  font-weight: 600;
+  margin-right: 0.2rem;
+}
+
+.answer {
+  font-weight: 300;
+}
+
+.me-description-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+}
+
+.resume-container {
+  width: 100%;
+  display: none;
+}
+
+.resume-container.active {
+  display: flex;
+  min-height: 80vh;
+}
+
+.resume-display {
+  width: 100%;
+  min-height: 80vh;
+}
+
+.about-card-bottom-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+}
+.about-card-bottom-container img {
+  width: 1.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -448,6 +529,14 @@ body .nofill {
 }
 body .nofill a {
   color: #81fdcb;
+}
+
+section {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
 }
 
 .overlay {
