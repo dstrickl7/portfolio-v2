@@ -13,11 +13,13 @@ if (navlist) {
     overlay.classList.toggle("active");
   });
 
-  navlinks.forEach((link) => {
-    link.addEventListener("click", () => {
-      hamburger.click();
+  if (document.documentElement.clientWidth < 1024) {
+    navlinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        hamburger.click();
+      });
     });
-  });
+  }
 }
 
 /***********************************************************/
@@ -75,5 +77,25 @@ resumeBtn.addEventListener("click", () => {
 });
 
 /***********************************************************/
+// Skill card variables
+const front = document.querySelector(".front");
+const back = document.querySelector(".back");
+const polygons = document.querySelectorAll(".polygon");
 
+// Display card back on tap
+polygons.forEach((polygon) => {
+  if (document.documentElement.clientWidth < 1024) {
+    polygon.addEventListener("click", () => {
+      front.classList.toggle("hidden");
+      back.classList.toggle("active");
+    });
+  } else {
+    polygon.addEventListener("mouseover", () => {
+      polygon.addEventListener("click", () => {
+        front.classList.toggle("hidden");
+        back.classList.toggle("active");
+      });
+    });
+  }
+});
 /***********************************************************/

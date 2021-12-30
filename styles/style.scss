@@ -3,6 +3,7 @@
 @use "hero";
 @use "projects";
 @use "about";
+@use "skills";
 
 * {
   margin: 0;
@@ -24,6 +25,7 @@ body {
 }
 
 section {
+  width: 100%;
   padding: 1.5rem;
   @include utilities.flex(center, normal, column);
 }
@@ -41,6 +43,10 @@ section {
   position: absolute;
   top: 0;
   z-index: 2;
+}
+
+.hidden {
+  display: none;
 }
 
 /*******Temp img sizing*******/
