@@ -1,27 +1,58 @@
 @use "./utilities";
 
-// @include utilities.flex(center, space-between);
-
 .projects {
   padding: 1.5rem;
+  @include utilities.flex(center, normal, column);
 }
 
 .project {
+  transform: translateX(-100%);
+  visibility: hidden;
+  width: 85vw;
+  transition: transform 1s ease-in-out;
+  background-color: utilities.$white;
+  margin: 1rem 0;
+}
+
+.project.visible {
+  transform: translateX(0);
+  visibility: visible;
+  transition: all 1s ease-in-out;
 }
 
 .project-img-container {
+  width: 100%;
 }
 
 .project-img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .project-info {
+  padding: 1rem;
+  position: relative;
+  @include utilities.flex(center, normal, column);
+}
+
+.project-info {
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+  }
 }
 
 .project-name {
+  margin-bottom: 0.75rem;
 }
 
+.project-name,
 .project-description {
+  text-align: center;
 }
 
 .project-btn-container {
@@ -31,7 +62,39 @@
 }
 
 .tech-container {
+  @include utilities.flex(center, center);
+  flex-wrap: wrap;
+  width: 75%;
 }
 
 .tech {
+  p {
+    font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+  }
+  padding: 0.1rem;
+  border: 0.1rem solid;
+  margin: 0.1rem;
 }
+/***************************************************************/
+// Styling for individual projects
+.featured {
+  @include utilities.cardTheme(#57ad45);
+}
+
+.project1 {
+  @include utilities.cardTheme(#ff7d1a);
+}
+
+.project2 {
+  @include utilities.cardTheme(#2bbcbd);
+}
+
+.project3 {
+  @include utilities.cardTheme(#6c7073);
+}
+
+.project4 {
+  @include utilities.cardTheme(#fd2f60);
+}
+
+/***************************************************************/

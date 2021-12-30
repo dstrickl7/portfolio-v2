@@ -24,6 +24,8 @@ if (navlist) {
 // Social icon sidebar variables
 const sidebar = document.querySelector(".icon-bar");
 const projectSection = document.querySelector("#projects");
+
+// Section observer for project section
 const options = {
   root: null, //viewport, default null
   threshold: 0.25, //btwn 0 and 1, default 0 how much of the item is on page
@@ -32,6 +34,9 @@ const options = {
 const projectSectionObserver = new IntersectionObserver(
   (entries, projectSectionObserver) => {
     entries.forEach((entry) => {
+      if (!entry.isIntersecting) {
+        return;
+      }
       sidebar.classList.toggle("visible");
     });
   },
@@ -39,15 +44,22 @@ const projectSectionObserver = new IntersectionObserver(
 );
 projectSectionObserver.observe(projectSection);
 /***********************************************************/
-// Social icon sidebar variables
+// Project variables
 const projects = document.querySelectorAll(".project");
+
+// observer for projects
 const projectOptions = {
   root: null, //viewport, default null
   threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
   rootMargin: "0px", //must be in px or %
 };
 const projectObserver = new IntersectionObserver((entries, projectObserver) => {
-  entries.forEach((entry) => {});
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      return;
+    }
+    entry.target.classList.toggle("visible");
+  });
 }, projectOptions);
 projects.forEach((project) => {
   projectObserver.observe(project);

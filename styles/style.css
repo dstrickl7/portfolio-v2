@@ -42,6 +42,9 @@ h4 {
 button a {
   text-decoration: none;
 }
+button a i {
+  margin-left: 0.5rem;
+}
 
 .btn-sm {
   min-width: 30%;
@@ -196,7 +199,7 @@ button a {
 }
 
 .hero-btn-container > .nofill {
-  background-color: #f0f0f0;
+  background-color: white;
   border: solid #81a9fd 0.2rem;
   border-image: linear-gradient(to right, #81a9fd 10%, #81fdcb) 5;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -213,8 +216,208 @@ button a {
 
 .projects {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
 }
 
+.project {
+  transform: translateX(-100%);
+  visibility: hidden;
+  width: 85vw;
+  transition: transform 1s ease-in-out;
+  background-color: #fcfcfc;
+  margin: 1rem 0;
+}
+
+.project.visible {
+  transform: translateX(0);
+  visibility: visible;
+  transition: all 1s ease-in-out;
+}
+
+.project-img-container {
+  width: 100%;
+}
+
+.project-img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+}
+
+.project-info:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
+}
+
+.project-name {
+  margin-bottom: 0.75rem;
+}
+
+.project-name,
+.project-description {
+  text-align: center;
+}
+
+.tech-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75%;
+}
+
+.tech {
+  padding: 0.1rem;
+  border: 0.1rem solid;
+  margin: 0.1rem;
+}
+.tech p {
+  font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+}
+
+/***************************************************************/
+.featured .fill {
+  padding: 0.65rem;
+  background: linear-gradient(to right, #57ad45 10%, #57ad45);
+  color: white;
+}
+.featured .fill a {
+  color: white;
+}
+.featured .nofill {
+  background-color: white;
+  border: solid #57ad45 0.2rem;
+  border-image: linear-gradient(to right, #57ad45 10%, #57ad45) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #57ad45;
+}
+.featured .nofill a {
+  color: #57ad45;
+}
+.featured .tech {
+  border-color: #57ad45;
+}
+.featured .project-info:after {
+  background-color: #57ad45;
+}
+
+.project1 .fill {
+  padding: 0.65rem;
+  background: linear-gradient(to right, #ff7d1a 10%, #ff7d1a);
+  color: white;
+}
+.project1 .fill a {
+  color: white;
+}
+.project1 .nofill {
+  background-color: white;
+  border: solid #ff7d1a 0.2rem;
+  border-image: linear-gradient(to right, #ff7d1a 10%, #ff7d1a) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #ff7d1a;
+}
+.project1 .nofill a {
+  color: #ff7d1a;
+}
+.project1 .tech {
+  border-color: #ff7d1a;
+}
+.project1 .project-info:after {
+  background-color: #ff7d1a;
+}
+
+.project2 .fill {
+  padding: 0.65rem;
+  background: linear-gradient(to right, #2bbcbd 10%, #2bbcbd);
+  color: white;
+}
+.project2 .fill a {
+  color: white;
+}
+.project2 .nofill {
+  background-color: white;
+  border: solid #2bbcbd 0.2rem;
+  border-image: linear-gradient(to right, #2bbcbd 10%, #2bbcbd) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #2bbcbd;
+}
+.project2 .nofill a {
+  color: #2bbcbd;
+}
+.project2 .tech {
+  border-color: #2bbcbd;
+}
+.project2 .project-info:after {
+  background-color: #2bbcbd;
+}
+
+.project3 .fill {
+  padding: 0.65rem;
+  background: linear-gradient(to right, #6c7073 10%, #6c7073);
+  color: white;
+}
+.project3 .fill a {
+  color: white;
+}
+.project3 .nofill {
+  background-color: white;
+  border: solid #6c7073 0.2rem;
+  border-image: linear-gradient(to right, #6c7073 10%, #6c7073) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #6c7073;
+}
+.project3 .nofill a {
+  color: #6c7073;
+}
+.project3 .tech {
+  border-color: #6c7073;
+}
+.project3 .project-info:after {
+  background-color: #6c7073;
+}
+
+.project4 .fill {
+  padding: 0.65rem;
+  background: linear-gradient(to right, #fd2f60 10%, #fd2f60);
+  color: white;
+}
+.project4 .fill a {
+  color: white;
+}
+.project4 .nofill {
+  background-color: white;
+  border: solid #fd2f60 0.2rem;
+  border-image: linear-gradient(to right, #fd2f60 10%, #fd2f60) 5;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  color: #fd2f60;
+}
+.project4 .nofill a {
+  color: #fd2f60;
+}
+.project4 .tech {
+  border-color: #fd2f60;
+}
+.project4 .project-info:after {
+  background-color: #fd2f60;
+}
+
+/***************************************************************/
 * {
   margin: 0;
   padding: 0;
@@ -228,22 +431,22 @@ body {
   background-color: #efefef;
   color: #000000;
 }
-body .btn-fill {
+body .fill {
   padding: 0.65rem;
   background: linear-gradient(to right, #81fdcb 10%, #81fdcb);
   color: white;
 }
-body .btn-fill a {
+body .fill a {
   color: white;
 }
-body .btn-nofill {
-  background-color: #f0f0f0;
+body .nofill {
+  background-color: white;
   border: solid #81fdcb 0.2rem;
   border-image: linear-gradient(to right, #81fdcb 10%, #81fdcb) 5;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   color: #81fdcb;
 }
-body .btn-nofill a {
+body .nofill a {
   color: #81fdcb;
 }
 

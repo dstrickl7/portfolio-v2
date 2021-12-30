@@ -15,7 +15,7 @@
 }
 
 @mixin nofill($color, $color2: $color) {
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(255, 255, 255);
   border: solid $color 0.2rem;
   border-image: linear-gradient(to right, $color 10%, $color2) 5;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
@@ -28,22 +28,39 @@
 @mixin theme($background, $text, $color1, $color2, $color3) {
   background-color: $background;
   color: $text;
-  .btn-fill {
+  .fill {
     @include fill($color1, white);
   }
-  .btn-nofill {
+  .nofill {
     @include nofill($color1);
+  }
+}
+
+@mixin cardTheme($color) {
+  .fill {
+    @include fill($color, white);
+  }
+  .nofill {
+    @include nofill($color);
+  }
+  .tech {
+    border-color: $color;
+  }
+  .project-info {
+    &:after {
+      background-color: $color;
+    }
   }
 }
 
 @media (min-width: 900px) {
   @mixin theme($background, $text, $color1, $color2, $color3) {
-    .btn-fill {
+    .fill {
       &:hover {
         @include fill($color2, white);
       }
     }
-    .btn-nofill {
+    .nofill {
       &:hover {
         @include fill($color2, white);
       }
