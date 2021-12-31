@@ -64,12 +64,16 @@ button a i {
 
 .navbar {
   width: 100%;
+  z-index: 3;
   min-height: 15vh;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo-img {
@@ -89,7 +93,7 @@ button a i {
 .hamburger::after {
   z-index: 5;
   display: block;
-  position: relative;
+  position: fixed;
   width: 1.5rem;
   height: 0.15rem;
   background-color: black;
@@ -164,6 +168,7 @@ button a i {
 
 /**************************************************************/
 .hero {
+  margin-top: 15vh;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -220,14 +225,15 @@ button a i {
 
 .project {
   transform: translateX(-100%);
-  visibility: hidden;
+  opacity: 0;
   width: 85vw;
   transition: transform 1s ease-in-out;
   background-color: #fcfcfc;
   margin: 1rem 0;
 }
 
-.project.visible {
+.slide-in {
+  opacity: 1;
   transform: translateX(0);
   visibility: visible;
   transition: all 1s ease-in-out;
@@ -719,12 +725,12 @@ section {
 }
 
 .overlay.active {
-  display: flex;
+  display: inline;
+  position: fixed;
   background-color: #000000;
   opacity: 70%;
   width: 100%;
   height: 100%;
-  position: absolute;
   top: 0;
   z-index: 2;
 }

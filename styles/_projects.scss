@@ -2,14 +2,15 @@
 
 .project {
   transform: translateX(-100%);
-  visibility: hidden;
+  opacity: 0;
   width: 85vw;
   transition: transform 1s ease-in-out;
   background-color: utilities.$white;
   margin: 1rem 0;
 }
 
-.project.visible {
+.slide-in {
+  opacity: 1;
   transform: translateX(0);
   visibility: visible;
   transition: all 1s ease-in-out;

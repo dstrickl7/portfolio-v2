@@ -1,6 +1,7 @@
 @use "utilities";
 
 .hero {
+  margin-top: 15vh;
   height: 100vh;
   @include utilities.flex(center, normal, column);
   padding: 1.5rem;

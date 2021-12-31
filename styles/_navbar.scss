@@ -2,9 +2,13 @@
 
 .navbar {
   width: 100%;
+  z-index: 3;
   min-height: 15vh;
   @include utilities.flex(center, space-between);
   padding: 5%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .logo-img {
@@ -25,7 +29,7 @@
 .hamburger::after {
   z-index: 5;
   display: block;
-  position: relative;
+  position: fixed;
   width: 1.5rem;
   height: 0.15rem;
   background-color: black;

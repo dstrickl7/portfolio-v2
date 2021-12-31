@@ -69,21 +69,22 @@ const projects = document.querySelectorAll(".project");
 
 // observer for projects
 const projectOptions = {
-  root: null, //viewport, default null
   threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "0px", //must be in px or %
+  rootMargin: "0px 0px -50% 0px", //must be in px or %
 };
-const projectObserver = new IntersectionObserver((entries, projectObserver) => {
+const projectSlideIn = new IntersectionObserver((entries, projectSlideIn) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.classList.toggle("visible");
+      entry.target.classList.toggle("slide-in");
+      projectSlideIn.unobserve(entry.target);
     } else {
       return;
     }
   });
 }, projectOptions);
+
 projects.forEach((project) => {
-  projectObserver.observe(project);
+  projectSlideIn.observe(project);
 });
 
 /***********************************************************/
