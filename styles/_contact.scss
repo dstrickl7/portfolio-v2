@@ -1,0 +1,39 @@
+@use "./utilities";
+
+.contact {
+  background: linear-gradient(utilities.$lgrey, utilities.$skyblue);
+}
+
+.form-container {
+  margin: 1.5rem 0;
+  width: 90%;
+  @include utilities.flex(flex-start, center, column);
+  input,
+  textarea {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  label {
+    font-weight: 600;
+  }
+  textarea {
+    min-height: 5rem;
+  }
+}
+
+.submit-btn {
+  margin: 0;
+}
+
+.contact-info-container {
+  margin: 1rem 0;
+  @include utilities.flex(flex-end, center);
+}
+
+.contact-info {
+  margin: 0 1rem;
+  a {
+    text-decoration: none;
+    color: utilities.$black;
+  }
+}

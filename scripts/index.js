@@ -12,20 +12,20 @@ if (navlist) {
     navlist.classList.toggle("active");
     overlay.classList.toggle("active");
   });
-
-  if (document.documentElement.clientWidth < 1024) {
-    navlinks.forEach((link) => {
-      link.addEventListener("click", () => {
-        hamburger.click();
-      });
-    });
-  }
 }
 
+if (document.documentElement.clientWidth < 1024) {
+  navlinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      hamburger.click();
+    });
+  });
+}
 /***********************************************************/
 // Social icon sidebar variables
 const sidebar = document.querySelector(".icon-bar");
 const projectSection = document.querySelector("#projects");
+const contactSection = document.querySelector("#contact");
 
 // Section observer for project section
 const options = {
@@ -33,18 +33,36 @@ const options = {
   threshold: 0.25, //btwn 0 and 1, default 0 how much of the item is on page
   rootMargin: "0px", //must be in px or %
 };
-const projectSectionObserver = new IntersectionObserver(
-  (entries, projectSectionObserver) => {
+const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      sidebar.classList.toggle("visible");
+    } else {
+      return;
+    }
+  });
+}, options);
+sectionObserver.observe(projectSection);
+
+// Section observer for contact section
+const contactOptions = {
+  root: null, //viewport, default null
+  threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
+  rootMargin: "0px", //must be in px or %
+};
+const contactSectionObserver = new IntersectionObserver(
+  (entries, contactSectionObserver) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
+      if (entry.isIntersecting) {
+        sidebar.classList.toggle("hidden");
+      } else {
         return;
       }
-      sidebar.classList.toggle("visible");
     });
   },
-  options
+  contactOptions
 );
-projectSectionObserver.observe(projectSection);
+contactSectionObserver.observe(contactSection);
 /***********************************************************/
 // Project variables
 const projects = document.querySelectorAll(".project");
@@ -57,10 +75,11 @@ const projectOptions = {
 };
 const projectObserver = new IntersectionObserver((entries, projectObserver) => {
   entries.forEach((entry) => {
-    if (!entry.isIntersecting) {
+    if (entry.isIntersecting) {
+      entry.target.classList.toggle("visible");
+    } else {
       return;
     }
-    entry.target.classList.toggle("visible");
   });
 }, projectOptions);
 projects.forEach((project) => {
@@ -81,21 +100,16 @@ resumeBtn.addEventListener("click", () => {
 const front = document.querySelector(".front");
 const back = document.querySelector(".back");
 const polygons = document.querySelectorAll(".polygon");
-
 // Display card back on tap
+
+/*
 polygons.forEach((polygon) => {
-  if (document.documentElement.clientWidth < 1024) {
-    polygon.addEventListener("click", () => {
+  polygon.addEventListener("click", (e) => {
+    
       front.classList.toggle("hidden");
-      back.classList.toggle("active");
-    });
-  } else {
-    polygon.addEventListener("mouseover", () => {
-      polygon.addEventListener("click", () => {
-        front.classList.toggle("hidden");
-        back.classList.toggle("active");
-      });
-    });
-  }
+      back.classList.toggle("visible");
+    
+  });
 });
+*/
 /***********************************************************/

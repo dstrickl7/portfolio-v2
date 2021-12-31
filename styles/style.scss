@@ -4,6 +4,7 @@
 @use "projects";
 @use "about";
 @use "skills";
+@use "contact";
 
 * {
   margin: 0;
@@ -46,12 +47,11 @@ section {
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
-/*******Temp img sizing*******/
-img {
-  width: 25vw;
+.visible {
+  visibility: visible;
 }
 
 /*************************************************************/
