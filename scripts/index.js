@@ -4,6 +4,7 @@ const navlist = document.querySelector(".navlist-container");
 const overlay = document.querySelector(".overlay");
 const navBtn = document.querySelector(".nav-btn");
 const navlinks = document.querySelectorAll(".navitem");
+const navbar = document.querySelector(".navbar");
 
 // Open mobile nav
 if (navlist) {
@@ -21,10 +22,29 @@ if (document.documentElement.clientWidth < 1024) {
     });
   });
 }
+
+/***********************************************************/
+const projectSection = document.querySelector("#projects");
+// Section observer for navbar
+const navOptions = {
+  root: null, //viewport, default null
+  threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
+  rootMargin: "0px 0px -50% 0px", //must be in px or %
+};
+const stickNavbar = new IntersectionObserver((entries, stickNavbar) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navbar.classList.toggle("scrolled");
+    } else {
+      return;
+    }
+  });
+}, navOptions);
+stickNavbar.observe(projectSection);
+
 /***********************************************************/
 // Social icon sidebar variables
 const sidebar = document.querySelector(".icon-bar");
-const projectSection = document.querySelector("#projects");
 const contactSection = document.querySelector("#contact");
 
 // Section observer for project section
