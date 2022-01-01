@@ -104,10 +104,10 @@
 
 .polygon {
   i {
-    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-size: clamp(2.5rem, 5vw, 5rem);
   }
   img {
-    width: clamp(2.5rem, 5vw, 4rem);
+    width: clamp(2.5rem, 5vw, 5rem);
   }
 }
 
@@ -127,27 +127,41 @@
   }
 
   .polygon {
-    width: 30%;
+    width: 40%;
   }
 
   .polygon:nth-child(3n + 3) {
     margin-left: 0;
   }
 
-  .polygon:nth-child(5n + 4) {
-    margin-left: 15%;
+  .polygon:nth-child(4n + 3) {
+    margin-left: 20%;
   }
 }
-@media (min-width: 900px) {
+
+@media (min-width: 768px) {
   .polygon {
     width: 25%;
   }
-  .polygon:nth-child(5n + 4) {
+
+  .polygon:nth-child(4n + 3) {
+    margin-left: 0;
+  }
+
+  .polygon:nth-child(6n + 4) {
+    margin-left: 12.5%;
+  }
+}
+@media (min-width: 1024px) {
+  .polygon {
+    width: 20%;
+  }
+  .polygon:nth-child(6n + 4) {
     margin-left: 0%;
   }
 
-  .polygon:nth-child(3n + 5) {
-    margin-left: 12.5%;
+  .polygon:nth-child(4n + 6) {
+    margin-left: 10%;
   }
 }
 /***********************************************************/

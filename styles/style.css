@@ -611,10 +611,10 @@ button a i {
 
 /*****************************************************/
 .polygon i {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 5rem);
 }
 .polygon img {
-  width: clamp(2.5rem, 5vw, 4rem);
+  width: clamp(2.5rem, 5vw, 5rem);
 }
 
 /*****************************************************/
@@ -632,28 +632,41 @@ button a i {
   }
 
   .polygon {
-    width: 30%;
+    width: 40%;
   }
 
   .polygon:nth-child(3n+3) {
     margin-left: 0;
   }
 
-  .polygon:nth-child(5n+4) {
-    margin-left: 15%;
+  .polygon:nth-child(4n+3) {
+    margin-left: 20%;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .polygon {
     width: 25%;
   }
 
-  .polygon:nth-child(5n+4) {
+  .polygon:nth-child(4n+3) {
+    margin-left: 0;
+  }
+
+  .polygon:nth-child(6n+4) {
+    margin-left: 12.5%;
+  }
+}
+@media (min-width: 1024px) {
+  .polygon {
+    width: 20%;
+  }
+
+  .polygon:nth-child(6n+4) {
     margin-left: 0%;
   }
 
-  .polygon:nth-child(3n+5) {
-    margin-left: 12.5%;
+  .polygon:nth-child(4n+6) {
+    margin-left: 10%;
   }
 }
 /***********************************************************/
@@ -683,6 +696,12 @@ button a i {
 
 .submit-btn {
   margin: 0;
+  padding: 0.65rem;
+  background: linear-gradient(to right, #81a9fd 10%, #81a9fd);
+  color: #fcfcfc;
+}
+.submit-btn a {
+  color: #fcfcfc;
 }
 
 .contact-info-container {
@@ -791,10 +810,5 @@ section {
 }
 
 /*************************************************************/
-.fade-out {
-  transform: translateX(-100%);
-  opacity: 0;
-  transition: all 1s ease-in;
-}
 
 /*# sourceMappingURL=style.css.map */

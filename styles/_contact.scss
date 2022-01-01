@@ -23,6 +23,7 @@
 
 .submit-btn {
   margin: 0;
+  @include utilities.fill(utilities.$dpblue, utilities.$white);
 }
 
 .contact-info-container {
