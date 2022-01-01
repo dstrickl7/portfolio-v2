@@ -39,5 +39,52 @@
 
 .coder-img {
   height: 40vh;
-  width: unset;
+}
+/*****************************************************************/
+@media (min-width: 900px) {
+  .hero {
+    @include utilities.flex(center, normal, row);
+    margin-top: 0;
+  }
+
+  .hero-text-container {
+    width: 60%;
+    text-align: left;
+    margin-left: 1.5rem;
+  }
+
+  .hero-btn-container {
+    justify-content: flex-start;
+    margin: 1rem 0;
+  }
+
+  .hero-btn-container > .fill {
+    &:hover {
+      @include utilities.fill(
+        utilities.$aquagreen,
+        utilities.$white,
+        utilities.$dpblue
+      );
+    }
+  }
+
+  .hero-btn-container > .nofill {
+    &:hover {
+      background: linear-gradient(
+        to right,
+        utilities.$dpblue,
+        utilities.$aquagreen
+      );
+      a {
+        color: utilities.$white;
+      }
+    }
+  }
+
+  .coder-img {
+    margin-right: 1.5rem;
+    // height: 50vh;
+    width: 35%;
+    height: unset;
+  }
 }

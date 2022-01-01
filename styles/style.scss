@@ -77,3 +77,12 @@ section {
 }
 
 /*************************************************************/
+@media (min-width: 900px) {
+  .icon-bar {
+    a {
+      &:hover {
+        color: utilities.$dpblue;
+      }
+    }
+  }
+}

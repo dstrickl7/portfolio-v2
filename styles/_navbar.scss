@@ -106,3 +106,52 @@
   transition: all 1s ease-in;
 }
 /**************************************************************/
+@media (min-width: 900px) {
+  .navlist-container {
+    visibility: visible;
+    justify-content: normal;
+    transform: translateX(0%);
+    position: unset;
+    top: unset;
+    right: unset;
+    width: 75%;
+    height: unset;
+    border-radius: 0;
+  }
+
+  .navlist {
+    width: 100%;
+    @include utilities.flex(center, flex-end);
+  }
+
+  .navlink {
+    position: relative;
+    margin: 0 1rem;
+    padding-bottom: 0.5rem;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+    }
+  }
+
+  .navlink:hover {
+    &:after {
+      cursor: pointer;
+      width: 100%;
+      height: 0.25rem;
+      background: linear-gradient(
+        to right,
+        utilities.$dpblue 25%,
+        utilities.$aquagreen
+      );
+      transition: width 0.25s ease-in;
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
