@@ -8,6 +8,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 1s ease-in;
 }
 
 .logo-img {
@@ -101,5 +102,7 @@
 .scrolled {
   position: fixed;
   background-color: utilities.$white;
+  transform: translateY(-5%);
+  transition: all 1s ease-in;
 }
 /**************************************************************/

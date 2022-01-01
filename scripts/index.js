@@ -25,16 +25,17 @@ if (document.documentElement.clientWidth < 1024) {
 
 /***********************************************************/
 const projectSection = document.querySelector("#projects");
+const heroSection = document.querySelector(".hero");
 // Section observer for navbar
 const navOptions = {
   root: null, //viewport, default null
   threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "0px 0px -50% 0px", //must be in px or %
+  rootMargin: "0px 0px -100%  0px", //must be in px or %
 };
 const stickNavbar = new IntersectionObserver((entries, stickNavbar) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      navbar.classList.toggle("scrolled");
+      navbar.classList.add("scrolled");
     } else {
       return;
     }
@@ -42,47 +43,67 @@ const stickNavbar = new IntersectionObserver((entries, stickNavbar) => {
 }, navOptions);
 stickNavbar.observe(projectSection);
 
-/***********************************************************/
-// Social icon sidebar variables
-const sidebar = document.querySelector(".icon-bar");
-const contactSection = document.querySelector("#contact");
-
-// Section observer for project section
-const options = {
-  root: null, //viewport, default null
-  threshold: 0.25, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "0px", //must be in px or %
-};
-const sectionObserver = new IntersectionObserver((entries, sectionObserver) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      sidebar.classList.toggle("visible");
-    } else {
-      return;
-    }
-  });
-}, options);
-sectionObserver.observe(projectSection);
-
-// Section observer for contact section
-const contactOptions = {
+/*** Unstick navbar ***/
+const navOptions2 = {
   root: null, //viewport, default null
   threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
   rootMargin: "0px", //must be in px or %
 };
-const contactSectionObserver = new IntersectionObserver(
-  (entries, contactSectionObserver) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        sidebar.classList.toggle("hidden");
-      } else {
-        return;
-      }
-    });
-  },
-  contactOptions
-);
-contactSectionObserver.observe(contactSection);
+
+const unstickNavbar = new IntersectionObserver((entries, stickNavbar) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      navbar.classList.remove("scrolled");
+    } else {
+      return;
+    }
+  });
+}, navOptions2);
+unstickNavbar.observe(heroSection);
+
+/***********************************************************/
+// Social icon sidebar variables
+const sidebar = document.querySelector(".icon-bar");
+const sections = document.querySelectorAll("section");
+const contactSection = document.querySelector("#contact");
+
+/*** Show sidebar ***/
+const sidebarOptions = {
+  root: null, //viewport, default null
+  threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
+  rootMargin: "-50% 0px", //must be in px or %
+};
+
+const showSidebar = new IntersectionObserver((entries, showSidebar) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      sidebar.classList.add("visible");
+    } else {
+      return;
+    }
+  });
+}, sidebarOptions);
+sections.forEach((section) => {
+  showSidebar.observe(section);
+});
+
+/*** Hide sidebar ***/
+const sidebarOptions2 = {
+  root: null, //viewport, default null
+  threshold: 0.85, //btwn 0 and 1, default 0 how much of the item is on page
+  rootMargin: "0px", //must be in px or %
+};
+
+const hideSidebar = new IntersectionObserver((entries, hideSidebar) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      sidebar.classList.remove("visible");
+    } else {
+      return;
+    }
+  });
+}, sidebarOptions2);
+hideSidebar.observe(contactSection);
 /***********************************************************/
 // Project variables
 const projects = document.querySelectorAll(".project");

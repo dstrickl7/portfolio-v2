@@ -73,6 +73,7 @@ button a i {
   position: absolute;
   top: 0;
   left: 0;
+  transition: all 1s ease-in;
 }
 
 .logo-img {
@@ -168,6 +169,8 @@ button a i {
 .scrolled {
   position: fixed;
   background-color: #fcfcfc;
+  transform: translateY(-5%);
+  transition: all 1s ease-in;
 }
 
 /**************************************************************/
@@ -788,5 +791,10 @@ section {
 }
 
 /*************************************************************/
+.fade-out {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 1s ease-in;
+}
 
 /*# sourceMappingURL=style.css.map */
