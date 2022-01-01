@@ -97,20 +97,5 @@ resumeBtn.addEventListener("click", () => {
 });
 
 /***********************************************************/
-// Skill card variables
-const front = document.querySelector(".front");
-const back = document.querySelector(".back");
-const polygons = document.querySelectorAll(".polygon");
-// Display card back on tap
 
-/*
-polygons.forEach((polygon) => {
-  polygon.addEventListener("click", (e) => {
-    
-      front.classList.toggle("hidden");
-      back.classList.toggle("visible");
-    
-  });
-});
-*/
 /***********************************************************/
