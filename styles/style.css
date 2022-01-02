@@ -20,7 +20,7 @@ h2 {
 }
 
 h3 {
-  font-size: clamp(1.3rem, 5vw, 1.75rem);
+  font-size: clamp(1.3rem, 5vw, 1.6rem);
 }
 
 h4 {
@@ -328,15 +328,6 @@ button a i {
   margin: 1rem 0;
 }
 
-.project-info:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0.5rem;
-}
-
 .slide-in {
   opacity: 1;
   transform: translateX(0);
@@ -359,6 +350,15 @@ button a i {
   flex-direction: column;
   justify-content: normal;
   align-items: center;
+}
+.project-info:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5rem;
 }
 
 .project-name {
@@ -393,7 +393,7 @@ button a i {
   margin: 0.1rem;
 }
 .tech p {
-  font-size: clamp(0.8rem, 1.5vw, 1.25rem);
+  font-size: clamp(0.7rem, 1.5vw, 1rem);
 }
 
 /***************************************************************/
@@ -556,7 +556,6 @@ button a i {
   }
   .featured .project-info:after {
     content: "";
-    position: absolute;
     top: 0;
     left: unset;
     right: 0;
@@ -586,14 +585,16 @@ button a i {
 }
 .about-card h3 {
   position: relative;
+  text-align: center;
+  margin-bottom: 1rem;
 }
 .about-card h3:after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 12.5%;
+  left: 35%;
   height: 0.25rem;
-  width: 75%;
+  width: 30%;
   background-color: #74e3d5;
 }
 
@@ -606,6 +607,7 @@ button a i {
   flex-direction: row;
   justify-content: normal;
   align-items: center;
+  margin-bottom: 1rem;
 }
 
 .label {
@@ -649,6 +651,26 @@ button a i {
   width: 1.5rem;
 }
 
+@media (min-width: 900px) {
+  .about-card {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .about-card-top {
+    order: 2;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+  }
+
+  .about-card-bottom-container {
+    align-items: flex-start;
+    width: 40%;
+  }
+}
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -857,6 +879,11 @@ button a i {
   color: #000000;
 }
 
+@media (min-width: 900px) {
+  .form-container {
+    width: 30%;
+  }
+}
 * {
   margin: 0;
   padding: 0;

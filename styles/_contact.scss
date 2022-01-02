@@ -38,3 +38,9 @@
     color: utilities.$black;
   }
 }
+
+@media (min-width: 900px) {
+  .form-container {
+    width: 30%;
+  }
+}
