@@ -36,7 +36,7 @@ h5 {
   border: none;
   border-radius: 0.25rem;
   padding: 0.5rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: 1rem 0.5rem;
   text-decoration: none;
 }
@@ -399,7 +399,7 @@ button a i {
   margin: 0.1rem;
 }
 .tech p {
-  font-size: clamp(0.7rem, 1.5vw, 1rem);
+  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
   font-weight: 200;
 }
 
