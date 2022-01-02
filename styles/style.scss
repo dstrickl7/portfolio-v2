@@ -59,6 +59,9 @@ section {
 .icon-bar {
   visibility: hidden;
   transform: translateX(-100%);
+  i {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
 }
 .icon-bar.visible {
   visibility: visible;

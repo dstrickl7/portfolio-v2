@@ -35,8 +35,12 @@
     @include nofill($color1);
   }
 }
-
 @mixin cardTheme($color) {
+  .project-info {
+    &:after {
+      background-color: $color;
+    }
+  }
   .fill {
     @include fill($color, white);
   }
@@ -45,25 +49,5 @@
   }
   .tech {
     border-color: $color;
-  }
-  .project-info {
-    &:after {
-      background-color: $color;
-    }
-  }
-}
-
-@media (min-width: 900px) {
-  @mixin theme($background, $text, $color1, $color2, $color3) {
-    .fill {
-      &:hover {
-        @include fill($color2, white);
-      }
-    }
-    .nofill {
-      &:hover {
-        @include fill($color2, white);
-      }
-    }
   }
 }
