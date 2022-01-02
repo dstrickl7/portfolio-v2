@@ -66,6 +66,9 @@
   img {
     width: 1.5rem;
   }
+  h5 {
+    margin-top: 1.5rem;
+  }
   @include utilities.flex(center, normal, column);
 }
 
@@ -73,6 +76,7 @@
   .about-card {
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
   .about-card-top {
     order: 2;
@@ -82,5 +86,19 @@
   .about-card-bottom-container {
     align-items: flex-start;
     width: 40%;
+    h4 {
+      text-align: center;
+      width: 100%;
+    }
+    h4,
+    p {
+      margin-bottom: 1.5rem;
+    }
+    h5 {
+      margin: 0;
+    }
+  }
+  .resume-container {
+    order: 3;
   }
 }

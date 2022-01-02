@@ -38,9 +38,11 @@ h5 {
   padding: 0.5rem;
   font-weight: 600;
   margin: 1rem 0.5rem;
+  text-decoration: none;
 }
 .btn:hover {
   cursor: pointer;
+  opacity: 0.7;
 }
 
 button a {
@@ -377,6 +379,9 @@ button a i {
   justify-content: center;
   align-items: center;
 }
+.project-btn-container a i {
+  margin-left: 0.5rem;
+}
 
 .tech-container {
   display: flex;
@@ -394,6 +399,7 @@ button a i {
 }
 .tech p {
   font-size: clamp(0.7rem, 1.5vw, 1rem);
+  font-weight: 200;
 }
 
 /***************************************************************/
@@ -498,11 +504,11 @@ button a i {
 }
 
 .project4 .project-info:after {
-  background-color: #fd2f60;
+  background-color: #e648e5;
 }
 .project4 .fill {
   padding: 0.65rem;
-  background: linear-gradient(to right, #fd2f60 10%, #fd2f60);
+  background: linear-gradient(to right, #e648e5 10%, #e648e5);
   color: white;
 }
 .project4 .fill a {
@@ -510,16 +516,16 @@ button a i {
 }
 .project4 .nofill {
   background-color: white;
-  border: solid #fd2f60 0.2rem;
-  border-image: linear-gradient(to right, #fd2f60 10%, #fd2f60) 5;
+  border: solid #e648e5 0.2rem;
+  border-image: linear-gradient(to right, #e648e5 10%, #e648e5) 5;
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  color: #fd2f60;
+  color: #e648e5;
 }
 .project4 .nofill a {
-  color: #fd2f60;
+  color: #e648e5;
 }
 .project4 .tech {
-  border-color: #fd2f60;
+  border-color: #e648e5;
 }
 
 /***************************************************************/
@@ -534,6 +540,13 @@ button a i {
 
   .project {
     width: 40vw;
+  }
+
+  /*
+  !!!! Making a min-height to ensure a more homogenous visual appeareance of the project card with different length descriptions
+  */
+  .project-description {
+    min-height: 7.5rem;
   }
 
   /***Featured project styling***/
@@ -650,11 +663,15 @@ button a i {
 .about-card-bottom-container img {
   width: 1.5rem;
 }
+.about-card-bottom-container h5 {
+  margin-top: 1.5rem;
+}
 
 @media (min-width: 900px) {
   .about-card {
     flex-direction: row;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .about-card-top {
@@ -670,7 +687,29 @@ button a i {
     align-items: flex-start;
     width: 40%;
   }
+  .about-card-bottom-container h4 {
+    text-align: center;
+    width: 100%;
+  }
+  .about-card-bottom-container h4,
+.about-card-bottom-container p {
+    margin-bottom: 1.5rem;
+  }
+  .about-card-bottom-container h5 {
+    margin: 0;
+  }
+
+  .resume-container {
+    order: 3;
+  }
 }
+.skills {
+  margin-bottom: 1.5rem;
+}
+.skills h3 {
+  margin: 1.5rem 0;
+}
+
 .skills-container {
   display: flex;
   flex-wrap: wrap;

@@ -52,6 +52,11 @@
 .project-btn-container {
   width: 100%;
   @include utilities.flex(center, center);
+  a {
+    i {
+      margin-left: 0.5rem;
+    }
+  }
 }
 
 .tech-container {
@@ -63,6 +68,7 @@
 .tech {
   p {
     font-size: clamp(0.7rem, 1.5vw, 1rem);
+    font-weight: 200;
   }
   padding: 0.1rem;
   border: 0.1rem solid;
@@ -87,7 +93,7 @@
 }
 
 .project4 {
-  @include utilities.cardTheme(#fd2f60);
+  @include utilities.cardTheme(#e648e5);
 }
 
 /***************************************************************/
@@ -98,6 +104,13 @@
   }
   .project {
     width: 40vw;
+  }
+
+  /*
+  !!!! Making a min-height to ensure a more homogenous visual appeareance of the project card with different length descriptions
+  */
+  .project-description {
+    min-height: 7.5rem;
   }
 
   /***Featured project styling***/
