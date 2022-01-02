@@ -869,7 +869,7 @@ button a i {
 }
 /***********************************************************/
 .contact {
-  background: linear-gradient(#e0e0e0, #74e3d5);
+  background: linear-gradient(#e0e0e0, #81a9fd);
 }
 
 .form-container {
@@ -895,7 +895,7 @@ button a i {
 .submit-btn {
   margin: 0;
   padding: 0.65rem;
-  background: linear-gradient(to right, #81a9fd 10%, #81a9fd);
+  background: linear-gradient(to right, #5f7ec2 10%, #5f7ec2);
   color: #fcfcfc;
 }
 .submit-btn a {
@@ -914,13 +914,21 @@ button a i {
   margin: 0 1rem;
 }
 .contact-info a {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
   text-decoration: none;
   color: #000000;
+}
+.contact-info a:hover {
+  color: #81a9fd;
 }
 
 @media (min-width: 900px) {
   .form-container {
     width: 30%;
+  }
+
+  .contact-info a:hover {
+    color: #5f7ec2;
   }
 }
 * {
@@ -1018,7 +1026,7 @@ section {
 /*************************************************************/
 @media (min-width: 900px) {
   .icon-bar a:hover {
-    color: #81a9fd;
+    color: #5f7ec2;
   }
 }
 
