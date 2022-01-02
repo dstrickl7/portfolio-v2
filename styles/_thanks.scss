@@ -1,0 +1,34 @@
+@use "./utilities";
+
+.thanks {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.thanks-container {
+  @include utilities.flex(center, center, column);
+  text-align: center;
+  position: absolute;
+  top: 30%;
+}
+
+.thanks-container > .fill {
+  @include utilities.fill(
+    utilities.$dpblue,
+    utilities.$white,
+    utilities.$aquagreen
+  );
+}
+
+@media (min-width: 900px) {
+  .thanks-container > .fill {
+    &:hover {
+      @include utilities.fill(
+        utilities.$aquagreen,
+        utilities.$white,
+        utilities.$dpblue
+      );
+    }
+  }
+}

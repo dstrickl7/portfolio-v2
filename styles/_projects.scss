@@ -8,6 +8,15 @@
   transition: transform 1s ease-in-out;
   background-color: utilities.$white;
   margin: 1rem 0;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.5rem;
+  }
 }
 
 .slide-in {
@@ -29,15 +38,6 @@
 .project-info {
   padding: 1rem;
   @include utilities.flex(center, normal, column);
-  &:after {
-    content: "";
-    position: absolute;
-    display: block;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 0.5rem;
-  }
 }
 
 .project-name {
@@ -119,20 +119,20 @@
     .project-img {
       height: 100%;
     }
-    @include utilities.flex(normal, normal);
-    /***Color stripe***/
     .project-info {
       padding: 1.5rem;
       width: 45%;
       justify-content: space-between;
-      &:after {
-        content: "";
-        top: 0;
-        left: unset;
-        right: 0;
-        width: 0.5rem;
-        height: 100%;
-      }
+    }
+    @include utilities.flex(normal, normal);
+    /***Color stripe***/
+    &:after {
+      bottom: unset;
+      left: unset;
+      top: 0;
+      right: 0;
+      width: 0.5rem;
+      height: 100%;
     }
     /******/
   }

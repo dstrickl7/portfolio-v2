@@ -35,12 +35,12 @@
     @include nofill($color1);
   }
 }
+
 @mixin cardTheme($color) {
-  .project-info {
-    &:after {
-      background-color: $color;
-    }
+  &:after {
+    background-color: $color;
   }
+
   .fill {
     @include fill($color, white);
   }

@@ -5,6 +5,7 @@
 @use "about";
 @use "skills";
 @use "contact";
+@use "thanks";
 
 * {
   margin: 0;
@@ -15,6 +16,7 @@
 
 body {
   font-size: 15px;
+  font-weight: 300;
   font-family: utilities.$nunito;
   @include utilities.theme(
     utilities.$lgrey,
