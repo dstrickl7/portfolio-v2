@@ -15,7 +15,7 @@ if (navlist) {
   });
 }
 
-if (document.documentElement.clientWidth < 1024) {
+if (document.documentElement.clientWidth < 900) {
   navlinks.forEach((link) => {
     link.addEventListener("click", () => {
       hamburger.click();
@@ -45,9 +45,9 @@ stickNavbar.observe(projectSection);
 
 /*** Unstick navbar ***/
 const navOptions2 = {
-  root: null, //viewport, default null
-  threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "0px", //must be in px or %
+  root: null,
+  threshold: 0,
+  rootMargin: "0px",
 };
 
 const unstickNavbar = new IntersectionObserver((entries, stickNavbar) => {
@@ -69,9 +69,9 @@ const contactSection = document.querySelector("#contact");
 
 /*** Show sidebar ***/
 const sidebarOptions = {
-  root: null, //viewport, default null
-  threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "-50% 0px", //must be in px or %
+  root: null,
+  threshold: 0,
+  rootMargin: "-50% 0px",
 };
 
 const showSidebar = new IntersectionObserver((entries, showSidebar) => {
@@ -89,9 +89,9 @@ sections.forEach((section) => {
 
 /*** Hide sidebar ***/
 const sidebarOptions2 = {
-  root: null, //viewport, default null
-  threshold: 0.85, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "0px", //must be in px or %
+  root: null,
+  threshold: 0.85,
+  rootMargin: "0px",
 };
 
 const hideSidebar = new IntersectionObserver((entries, hideSidebar) => {
@@ -104,15 +104,17 @@ const hideSidebar = new IntersectionObserver((entries, hideSidebar) => {
   });
 }, sidebarOptions2);
 hideSidebar.observe(contactSection);
+
 /***********************************************************/
 // Project variables
 const projects = document.querySelectorAll(".project");
 
 // observer for projects
 const projectOptions = {
-  threshold: 0, //btwn 0 and 1, default 0 how much of the item is on page
-  rootMargin: "0px 0px -50% 0px", //must be in px or %
+  threshold: 0,
+  rootMargin: "0px 0px -50% 0px",
 };
+
 const projectSlideIn = new IntersectionObserver((entries, projectSlideIn) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
@@ -136,7 +138,5 @@ const resumeBtn = document.querySelector("#resume-btn");
 resumeBtn.addEventListener("click", () => {
   resumeContainer.classList.toggle("active");
 });
-
-/***********************************************************/
 
 /***********************************************************/
