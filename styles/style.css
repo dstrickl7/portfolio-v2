@@ -31,6 +31,17 @@ h5 {
   font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
+@media (min-width: 1620px) {
+  h2 {
+    min-width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  a {
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+  }
+}
 .btn {
   text-align: center;
   border: none;
@@ -82,7 +93,7 @@ button a i {
 }
 
 .logo-img {
-  width: 2.5rem;
+  width: clamp(2.5rem, 2vw, 3.5rem);
 }
 
 /**************************************************************/
@@ -319,6 +330,12 @@ button a i {
     margin-right: 1.5rem;
     width: 35%;
     height: unset;
+  }
+}
+/*****************************************************************/
+@media (min-width: 1620px) {
+  .hero {
+    justify-content: space-evenly;
   }
 }
 .project {
@@ -577,6 +594,20 @@ button a i {
     height: 100%;
   }
 }
+/********************************************************************/
+@media (min-width: 1800px) {
+  .project {
+    width: 35vw;
+    margin-bottom: 5rem;
+  }
+
+  .featured {
+    width: 80vw;
+  }
+  .featured .project-info {
+    padding: 3rem;
+  }
+}
 .about-card {
   width: 85vw;
   margin: 1rem 0;
@@ -668,6 +699,7 @@ button a i {
   margin-top: 1.5rem;
 }
 
+/*****************************************************************/
 @media (min-width: 900px) {
   .about-card {
     flex-direction: row;
@@ -702,6 +734,12 @@ button a i {
 
   .resume-container {
     order: 3;
+  }
+}
+/*****************************************************************/
+@media (min-width: 1800px) {
+  .about-card {
+    width: 80%;
   }
 }
 .skills {
@@ -869,6 +907,11 @@ button a i {
   }
 }
 /***********************************************************/
+@media (min-width: 1800px) {
+  .skills-container {
+    width: 80%;
+  }
+}
 .contact {
   background: linear-gradient(#e0e0e0, #81a9fd);
 }

@@ -71,6 +71,8 @@
   }
   @include utilities.flex(center, normal, column);
 }
+/*****************************************************************/
+// Tablet and desktop screens
 
 @media (min-width: 900px) {
   .about-card {
@@ -100,5 +102,13 @@
   }
   .resume-container {
     order: 3;
+  }
+}
+
+/*****************************************************************/
+// XXL screens
+@media (min-width: 1800px) {
+  .about-card {
+    width: 80%;
   }
 }

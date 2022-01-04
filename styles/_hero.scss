@@ -86,3 +86,10 @@
     height: unset;
   }
 }
+/*****************************************************************/
+// XXL screens
+@media (min-width: 1620px) {
+  .hero {
+    justify-content: space-evenly;
+  }
+}

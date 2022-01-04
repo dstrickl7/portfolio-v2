@@ -137,3 +137,19 @@
     /******/
   }
 }
+
+/********************************************************************/
+// XXL screens
+@media (min-width: 1800px) {
+  .project {
+    width: 35vw;
+    margin-bottom: 5rem;
+  }
+
+  .featured {
+    width: 80vw;
+    .project-info {
+      padding: 3rem;
+    }
+  }
+}
